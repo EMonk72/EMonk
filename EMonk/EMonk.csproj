@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collections\RBTree.cs" />
     <Compile Include="Collections\SparseMap.cs" />
     <Compile Include="Pathfinding\IMapNode.cs" />
     <Compile Include="Pathfinding\PathMap.cs" />

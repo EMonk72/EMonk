@@ -158,7 +158,7 @@ namespace EMonk.Pathfinding
 		protected override PFState<TNode> CreateAt(MapPosition idx)
 		{
 			PFState<TNode> res = new PFState<TNode>(idx);
-			data[idx] = res;
+			this[idx] = res;
 			return res;
 		}
 
@@ -203,11 +203,12 @@ namespace EMonk.Pathfinding
 			PathCost = double.PositiveInfinity;
 
 			if (!data.ContainsKey(to))
+			//if (!this.ContainsKey(to))
 				return null;
 
 			LinkedList<MapPosition> res = new LinkedList<MapPosition>();
 
-			PFState<TNode> curr = data[to];
+			PFState<TNode> curr = this[to];
 			PathCost = curr.TotalCost;
 
 			while (curr != null)
